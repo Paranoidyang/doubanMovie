@@ -2,7 +2,7 @@
   <div id="app">
     <Dheader></Dheader>
     <transition name="fade">
-      <keep-alive exclude="moviesDetail">
+      <keep-alive exclude="moviesDetail"><!-- 缓存组件，避免多次加载 ，提高性能。其中exclude是针对性缓存指定组件的，如果缓存太多也会影响性能-->
         <router-view></router-view>
       </keep-alive>
     </transition>
@@ -16,7 +16,7 @@ export default {
       msg: 'hello vue'
     }
   },
-  components: {
+  components: {//es6引入组件新方式
     'Dheader': (resolve) => {
       require(['./header'], resolve)
     }
