@@ -5,6 +5,7 @@
         <a class="title">豆瓣电影</a>
         <div class="search-container">
           <el-input placeholder="电影、影人、影院、电视剧" v-model="content">
+          <!-- slot="append"可以让按钮紧跟在输入框后面 -->
             <el-button slot="append" icon="search" @click="searchMovie"></el-button>
           </el-input>
         </div>

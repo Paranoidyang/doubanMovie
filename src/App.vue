@@ -16,7 +16,7 @@ export default {
       msg: 'hello vue'
     }
   },
-  components: {//es6引入组件新方式
+  components: {
     'Dheader': (resolve) => {
       require(['./header'], resolve)
     }
